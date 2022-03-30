@@ -8,7 +8,7 @@ export default function CardList(){
     }
     return(
         <div style={{display:"grid", gridColumnGap:"15px" ,gridTemplateColumns:"repeat(4,1fr)",gridRowGap:"10px",margin:"auto",paddingTop:"30px",width:"80%"}}>
-        {data.map((elt)=><CardItem name={elt.name} writer={elt.writer} desc={elt.desc} url={elt.url} id={elt.id} navig={goTo}/>)}
+        {data.map((elt,key)=><CardItem key={key} name={elt.name} writer={elt.writer} desc={elt.desc} url={elt.url} id={elt.id} navig={goTo}/>)}
         </div>
     )
 }
